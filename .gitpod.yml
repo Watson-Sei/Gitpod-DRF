@@ -1,4 +1,12 @@
+ports:
+  - port: 8000
+    onOpen: open-browser
+
 tasks:
-  - init: echo "Replace me with a build script for the project."
-    command: echo "Replace me with something that should run on every start, or just
-      remove me entirely."
+  - init: >
+      pip3 install --upgrade pip &&
+      pip3 install -r reequirements.txt && 
+      django-admin startproject config . &&
+      echo "ALLOWED_HOSTS = ['*']" >> settings.py &&
+      python3 manage.py migrate
+    command: python3 manage.py runserver
