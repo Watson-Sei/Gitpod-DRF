@@ -5,7 +5,7 @@ ports:
 tasks:
   - init: >
       pip3 install --upgrade pip &&
-      pip3 install -r reequirements.txt && 
+      pip3 install -r requirements.txt && 
       django-admin startproject config . &&
       echo "ALLOWED_HOSTS = ['*']" >> settings.py &&
       python3 manage.py migrate
