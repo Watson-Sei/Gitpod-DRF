@@ -8,9 +8,10 @@ tasks:
   - init: >
       pip3 install --upgrade pip && 
       pip3 install -r requirements.txt 
-  - command: echo Terminal1
-      command: mysql -e "show databases;"
-      command: show create database mydb
+  - command: >
+      echo Terminal1
+      mysql -e "show databases;"
+      show create database mydb
       
 
 # 手動設定
