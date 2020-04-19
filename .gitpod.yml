@@ -12,8 +12,8 @@ tasks:
   - command: >
       echo Terminal1 &&
       mysql -u root &&
-      show databases; &&
-      show create database mydb
+      mysql -e "create database mydb;" &&
+      mysql -e "show databases;"
       
 
 # 手動設定
