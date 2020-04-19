@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_USER: ${USERNAME}
+      MYSQL_PASSWORD: ${USERPASS}
+      MYSQL_ROOT_PASSWORD: ${ROOTPASS}
+    ports:
+      - "3306:3306"
+
+  web:
+    build: .
+    volumes:
+      - .:/
+    tty: true
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+   
