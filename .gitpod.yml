@@ -6,6 +6,9 @@ tasks:
   - init: >
       pip3 install --upgrade pip &&
       pip3 install -r requirements.txt && 
+      image: 
+        file: .gitpod.Dockerfile
+      pip3 install -U docker-compose &&
       docker-compose up -d &&
       docker container exec -it django-dev_web_1 django-admin django-dev
 
