@@ -7,6 +7,6 @@ tasks:
       pip3 install --upgrade pip &&
       pip3 install -r requirements.txt && 
       django-admin startproject config . &&
-      echo "ALLOWED_HOSTS = ['*']" >> settings.py &&
+      echo "ALLOWED_HOSTS = ['*']" >> config/settings.py &&
       python3 manage.py migrate
     command: python3 manage.py runserver
