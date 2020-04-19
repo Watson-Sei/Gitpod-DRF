@@ -6,8 +6,8 @@ image: gitpod/workspace-mysql
 
 tasks:
   - init: >
-      pip3 install --upgrade pip && pip3 install -r requirements.txt &&  pip3
-      install -U docker-compose 
+      pip3 install --upgrade pip && 
+      pip3 install -r requirements.txt 
 
 # 手動設定
 ## DATABASESの設定

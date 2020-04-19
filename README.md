@@ -21,3 +21,23 @@ DATABASES = {
 ``` 
 docker-composes up 
 ```
+
+
+
+
+
+# MySQLはGitPodが用意してくれている
+https://github.com/gitpod-io/workspace-images/tree/master/mysql
+
+```
+[client]
+host     = localhost
+user     = root
+password =
+socket   = /var/run/mysqld/mysqld.sock
+[mysql_upgrade]
+host     = localhost
+user     = root
+password =
+socket   = /var/run/mysqld/mysqld.sock
+```
