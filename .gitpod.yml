@@ -9,6 +9,7 @@ tasks:
       pip3 install --upgrade pip && 
       pip3 install -r requirements.txt 
       - command: echo Terminal1
+      
 
 # 手動設定
 ## DATABASESの設定
