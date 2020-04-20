@@ -13,7 +13,6 @@ tasks:
       echo Terminal1 &&
       mysql -u root &&
       mysql -e "create database mydb;" &&
-      mysql -e "quit;" &&
       mysql -e "show databases;"
       
 
